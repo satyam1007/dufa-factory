@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dufa</title>
+  <link rel="icon" href="./images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    .menu-hidden {
+      display: none;
+    }
+
+    .underline-hover {
+      position: relative;
+    }
+
+    .underline-hover::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: black;
+      transition: width 0.3s ease;
+    }
+
+    .underline-hover:hover::after {
+      width: 100%;
+    }
+
+    .carousel-item {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .carousel-inner {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r to-blue-200 from-green-100 p-4 sticky top-0 z-50"
+    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="./images/logo.png" alt="Dufa Furniture Logo" class="rounded cursor-pointer" width="100px">
+      </div>
+      <ul class="hidden md:flex items-center space-x-8 flex-1 justify-center">
+        <li class="tracking-wider"><a href="#" class="text-black underline-hover">Home</a></li>
+        <li class="tracking-wider"><a href="./about.html" class="text-black underline-hover">About</a></li>
+        <li class="tracking-wider"><a href="./products.html" class="text-black underline-hover">Products</a></li>
+        <li class="tracking-wider"><a href="./contact.html" class="text-black underline-hover">Contact</a></li>
+      </ul>
+      <div class="relative">
+        <button class="text-black focus:outline-none rounded-full bg-white" aria-label="Toggle profile">
+          <img src="./images/dufa-founder.png" alt="" class="w-10 rounded-full shadow-xl">
+        </button>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="menu-button" class="text-black focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden p-4">
+      <ul>
+        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a href="#">Home</a>
+        </li>
+        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
+            href="./about.html">About</a></li>
+        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
+            href="./products.html">Products</a></li>
+        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
+            href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="relative">
+    <!-- Carousel Container -->
+    <div class="carousel relative shadow-2xl">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="./images/img-2.jpeg" class="w-full h-auto" alt="Living room setup">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item hidden">
+          <img
+            src="https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23718.jpg"
+            class="w-full h-auto" alt="Modern furniture design">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item hidden">
+          <img
+            src="https://w0.peakpx.com/wallpaper/271/905/HD-wallpaper-modern-kitchen-design-stylish-modern-interior-black-stylish-kitchen-furniture-black-kitchen-stylish-design.jpg"
+            class="w-full h-auto" alt="Modern furniture design">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev absolute top-0 bottom-0 left-0 z-10 flex items-center justify-center p-2 md:p-4 rounded-full text-white focus:outline-none"
+        type="button" aria-label="Previous slide">
+        <span class="sr-only">Previous</span>
+        <i class="fa-solid fa-circle-arrow-left text-3xl md:text-4xl"></i>
+      </button>
+      <button
+        class="carousel-control-next absolute top-0 bottom-0 right-0 z-10 flex items-center justify-center p-2 md:p-4 rounded-full text-white focus:outline-none"
+        type="button" aria-label="Next slide">
+        <span class="sr-only">Next</span>
+        <i class="fa-solid fa-circle-arrow-right text-3xl md:text-4xl"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- WidgetPlus Section -->
+  <section class="py-16 bg-gradient-to-r to-blue-200 from-green-100 p-6">
+    <div>
+      <h1 class="text-4xl text-center mb-8 font-bold">Materials that we provide</h1>
+      <div
+        class="flex flex-wrap justify-center gap-4 md:justify-around md:gap-8 bg-gray-100 p-4 rounded-lg shadow-md mb-8">
+        <div class="flex flex-col items-center">
+          <span class="mr-2">
+            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275748.png" alt="Wooden Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">Wooden</h1>
+          <p class="text-gray-600 text-center">Elegant and timeless wooden materials.</p>
+        </div>
+        <div class="flex flex-col items-center mt-4 md:mt-0">
+          <span class="mr-2">
+            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275753.png" alt="Metal Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">Metal</h1>
+          <p class="text-gray-600 text-center">Strong and durable metal components.</p>
+        </div>
+        <div class="flex flex-col items-center mt-4 md:mt-0">
+          <span class="mr-2">
+            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275726.png" alt="Plastic Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">Plastic</h1>
+          <p class="text-gray-600 text-center">Versatile and lightweight plastic.</p>
+        </div>
+        <div class="flex flex-col items-center mt-4 md:mt-0">
+          <span class="mr-2">
+            <img src="./images/HDHMR.png" alt="HDHMR Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">HDHMR</h1>
+          <p class="text-gray-600 text-center">High-density and moisture-resistant.</p>
+        </div>
+        <div class="flex flex-col items-center mt-4 md:mt-0">
+          <span class="mr-2">
+            <img src="./images/laminates.png" alt="Laminates Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">Laminates</h1>
+          <p class="text-gray-600 text-center">Stylish and protective laminates.</p>
+        </div>
+        <div class="flex flex-col items-center mt-4 md:mt-0">
+          <span class="mr-2">
+            <img src="./images/PU-Paint.png" alt="PU Paints Icon" class="h-12 w-12">
+          </span>
+          <h1 class="text-lg md:text-xl font-bold text-gray-800">PU Paints</h1>
+          <p class="text-gray-600 text-center">Smooth and durable PU paints.</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-wrap justify-between items-center mb-24 mt-24 space-y-4 md:space-y-0 md:space-x-4 bg-gray-100 p-4 rounded-lg shadow-md">
+      <div class="w-full md:w-96 h-full">
+        <img
+          src="https://media.istockphoto.com/id/943910360/photo/posters-in-cozy-apartment-interior.jpg?s=612x612&w=0&k=20&c=QzNjsxCNMcFNxpn4E2ocPvSU8Ud2S3B_mHyo5L-HOLo="
+          alt="img-1" class="w-full h-full object-cover rounded">
+        <p class="mt-2 text-gray-700 text-center">Cozy apartment interior with stylish posters and a modern vibe.</p>
+      </div>
+      <div class="w-full md:w-96 h-full">
+        <img src="https://www.decorpot.com/images/blogimage1021288300small-l-shaped-modular-kitchen-design.jpg"
+          alt="img-2" class="w-full h-full object-cover rounded">
+        <p class="mt-2 text-gray-700 text-center">L-shaped modular kitchen design, perfect for contemporary homes.</p>
+      </div>
+      <div class="w-full md:w-96 h-full">
+        <img
+          src="https://img.freepik.com/free-photo/mid-century-modern-living-room-interior-design-with-monstera-tree_53876-129804.jpg"
+          alt="img-3" class="w-full h-full object-cover rounded">
+        <p class="mt-2 text-gray-700 text-center">Mid-century modern living room with a touch of greenery.</p>
+      </div>
+    </div>
+
+
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">WidgetPlus</h2>
+        <p class="text-lg text-gray-600">Discover the ultimate combination of functionality and style with our
+          WidgetPlus range.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Widget Item 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-11.jpeg" alt="Widget 1" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 1</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 1.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-10.jpeg" alt="Widget 2" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 2</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 2.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-14.jpeg" alt="Widget 3" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 3</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 3.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-18.jpeg" alt="Widget 4" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 4</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 4.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-4.jpeg" alt="Widget 5" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 5</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 5.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="./images/img-8.jpeg" alt="Widget 6" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 6</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-56 p-2 mt-8 rounded bg-gray-800 text-white text-center hover:bg-gray-700">
+        <button class="text-lg cursor-pointer"><a href="./products.html">See more products --></a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Logo -->
+        <div class="flex items-center justify-center md:col-span-2 lg:col-span-1">
+          <img src="./images/dufa.png" alt="Dufa Furniture Logo" class="w-56 rounded">
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-200">Home</a></li>
+            <li><a href="./about.html" class="hover:text-gray-200">About</a></li>
+            <li><a href="./products.html" class="hover:text-gray-200">Products</a></li>
+            <li><a href="./contact.html" class="hover:text-gray-200">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Social Media Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <ul class="flex space-x-4">
+            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-facebook"></i></a></li>
+            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a></li>
+            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a></li>
+            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+          <p class="mb-2">Plot No. 57, Sector 27-28, Hisar (Hry.),</p>
+          <p class="mb-2">Hisar, India, 125001</p>
+          <p class="mb-2">dufamodular@gmail.com</p>
+          <p>8708807007</p>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2024 Dufa Furniture. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
