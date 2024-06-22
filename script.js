@@ -21,6 +21,23 @@ if (slides.length > 0) {
   });
 };
 
+// Get all the list items
+const listItems = document.querySelectorAll('#mobile-menu ul li');
+
+// Add a click event listener to each list item
+listItems.forEach(item => {
+  item.addEventListener('click', (event) => {
+    // Prevent the default link behavior
+    event.preventDefault();
+    // Get the href attribute from the anchor tag
+    const targetPage = item.querySelector('a').getAttribute('href');
+    // Navigate to the target page
+    if (targetPage) {
+      location.href = targetPage;
+    };
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Select all elements with the class "heartIcon"
