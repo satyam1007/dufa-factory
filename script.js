@@ -3,42 +3,6 @@ document.getElementById('menu-button').addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
 });
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
-const totalSlides = slides.length;
-
-if (slides.length > 0) {
-  document.querySelector('.carousel-control-next').addEventListener('click', () => {
-    slides[currentSlide].classList.add('hidden');
-    currentSlide = (currentSlide + 1) % totalSlides;
-    slides[currentSlide].classList.remove('hidden');
-  });
-
-  document.querySelector('.carousel-control-prev').addEventListener('click', () => {
-    slides[currentSlide].classList.add('hidden');
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    slides[currentSlide].classList.remove('hidden');
-  });
-};
-
-// Get all the list items
-const listItems = document.querySelectorAll('#mobile-menu ul li');
-
-// Add a click event listener to each list item
-listItems.forEach(item => {
-  item.addEventListener('click', (event) => {
-    // Prevent the default link behavior
-    event.preventDefault();
-    // Get the href attribute from the anchor tag
-    const targetPage = item.querySelector('a').getAttribute('href');
-    // Navigate to the target page
-    if (targetPage) {
-      location.href = targetPage;
-    };
-  });
-});
-
-
 document.addEventListener("DOMContentLoaded", function () {
   // Select all elements with the class "heartIcon"
   let heartIcons = document.querySelectorAll(".heartIcon");
@@ -63,4 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const carousel = document.getElementById('carousel');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+let offset = 0;
+
+if (carousel && next && prev) {
+  next.addEventListener('click', () => {
+    if (offset < (carousel.children.length - 1) * 100) {
+      offset += 100;
+      carousel.style.transform = `translateX(-${offset}%)`;
+    }
+  });
+
+  prev.addEventListener('click', () => {
+    if (offset > 0) {
+      offset -= 100;
+      carousel.style.transform = `translateX(-${offset}%)`;
+    }
+  });
+}
 

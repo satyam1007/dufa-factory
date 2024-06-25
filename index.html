@@ -54,7 +54,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="bg-gradient-to-r to-blue-200 from-green-100 p-4 sticky top-0 z-50"
+  <nav class="bg-gradient-to-r to-yellow-50 from-yellow-100 p-4 sticky top-0 z-50"
     style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-4">
@@ -67,7 +67,7 @@
         <li class="tracking-wider"><a href="./contact.html" class="text-black underline-hover">Contact</a></li>
       </ul>
       <div class="relative">
-        <button class="text-black focus:outline-none rounded-full bg-white" aria-label="Toggle profile">
+        <button class="text-black focus:outline-none rounded-full bg-yellow-400" aria-label="Toggle profile">
           <img src="./images/dufa-founder.png" alt="" class="w-10 rounded-full shadow-xl">
         </button>
       </div>
@@ -82,111 +82,84 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden p-4">
-      <ul>
-        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a href="#">Home</a>
-        </li>
-        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
-            href="./about.html">About</a></li>
-        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
-            href="./products.html">Products</a></li>
-        <li class="list-none cursor-pointer py-1 hover:bg-white px-2 rounded py-2 shadow-xl"><a
-            href="./contact.html">Contact</a></li>
-      </ul>
+      <div class="flex items-center flex-col gap-2">
+        <a class="bg-white w-full py-2 rounded shadow-xl pl-5" href="#">Home</a>
+        <a class="bg-white w-full py-2 rounded shadow-xl pl-5" href="./about.html">About</a>
+        <a class="bg-white w-full py-2 rounded shadow-xl pl-5" href="./products.html">Products</a>
+        <a class="bg-white w-full py-2 rounded shadow-xl pl-5" href="./contact.html">Contact</a>
+      </div>
     </div>
   </nav>
 
   <div class="relative">
-    <!-- Carousel Container -->
-    <div class="carousel relative shadow-2xl">
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <img src="./images/img-2.jpeg" class="w-full h-auto" alt="Living room setup">
+    <div class="carousel-item active">
+      <img src="./images/homePage.png" class="w-full h-auto" alt="Living room setup">
+    </div>
+  </div>
+
+  <div class="mx-auto px-4 py-8 bg-gradient-to-r from-yellow-100 to-yellow-50">
+    <h1 class="text-4xl text-center mt-4 font-bold tracking-wider mb-6">Products that we Provide</h1>
+
+    <!-- Carousel Wrapper -->
+    <div class="relative w-full overflow-hidden" id="Products">
+      <!-- Slides -->
+      <div id="carousel" class="carousel flex transition-transform duration-300 ease-out">
+        <div class="carousel-item flex-shrink-0 p-2">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="https://5.imimg.com/data5/SELLER/Default/2024/1/377521559/SG/CG/LB/5945844/modern-modular-kitchen.jpg"
+              alt="Category 1" class="rounded-t-lg w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mt-2">Category 1</h2>
+            <p class="mt-2">Modular Kitchen</p>
+          </div>
         </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item hidden">
-          <img
-            src="https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23718.jpg"
-            class="w-full h-auto" alt="Modern furniture design">
+        <div class="carousel-item flex-shrink-0 p-2">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="https://img.staticmb.com/mbcontent/images/crop/uploads/2021/5/kitchen-glass-door-designs-with-wooden-frame_1621686041569_0_1200.jpg"
+              alt="Category 2" class="rounded-t-lg w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mt-2">Category 2</h2>
+            <p class="mt-2">Doors</p>
+          </div>
         </div>
-        <!-- Slide 3 -->
-        <div class="carousel-item hidden">
-          <img
-            src="https://w0.peakpx.com/wallpaper/271/905/HD-wallpaper-modern-kitchen-design-stylish-modern-interior-black-stylish-kitchen-furniture-black-kitchen-stylish-design.jpg"
-            class="w-full h-auto" alt="Modern furniture design">
+        <div class="carousel-item flex-shrink-0 p-2">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="https://i.pinimg.com/736x/1f/0a/38/1f0a3829638becefa149c2ccaa39f5ab.jpg" alt="Category 3"
+              class="rounded-t-lg w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mt-2">Category 3</h2>
+            <p class="mt-2">Wardrobe</p>
+          </div>
+        </div>
+        <div class="carousel-item flex-shrink-0 p-2">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/home-decor-advice/guides-and-how-tos/choosing-living-room-furniture/Title-living-room-interior-design.jpg"
+              alt="Category 4" class="rounded-t-lg w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mt-2">Category 4</h2>
+            <p class="mt-2">Furniture</p>
+          </div>
         </div>
       </div>
-
-      <!-- Controls -->
-      <button
-        class="carousel-control-prev absolute top-0 bottom-0 left-0 z-10 flex items-center justify-center p-2 md:p-4 rounded-full text-white focus:outline-none"
-        type="button" aria-label="Previous slide">
-        <span class="sr-only">Previous</span>
-        <i class="fa-solid fa-circle-arrow-left text-3xl md:text-4xl"></i>
+      <!-- Navigation Buttons -->
+      <button id="prev"
+        class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full focus:outline-none">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
       </button>
-      <button
-        class="carousel-control-next absolute top-0 bottom-0 right-0 z-10 flex items-center justify-center p-2 md:p-4 rounded-full text-white focus:outline-none"
-        type="button" aria-label="Next slide">
-        <span class="sr-only">Next</span>
-        <i class="fa-solid fa-circle-arrow-right text-3xl md:text-4xl"></i>
+      <button id="next"
+        class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full focus:outline-none">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
   </div>
 
-
   <!-- WidgetPlus Section -->
-  <section class="py-16 bg-gradient-to-r to-blue-200 from-green-100 p-6">
-    <div>
-      <h1 class="text-4xl text-center mb-8 font-bold">Materials that we provide</h1>
-      <div
-        class="flex flex-wrap justify-center gap-4 md:justify-around md:gap-8 bg-gray-100 p-4 rounded-lg shadow-md mb-8">
-        <div class="flex flex-col items-center">
-          <span class="mr-2">
-            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275748.png" alt="Wooden Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">Wooden</h1>
-          <p class="text-gray-600 text-center">Elegant and timeless wooden materials.</p>
-        </div>
-        <div class="flex flex-col items-center mt-4 md:mt-0">
-          <span class="mr-2">
-            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275753.png" alt="Metal Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">Metal</h1>
-          <p class="text-gray-600 text-center">Strong and durable metal components.</p>
-        </div>
-        <div class="flex flex-col items-center mt-4 md:mt-0">
-          <span class="mr-2">
-            <img src="https://cdn-icons-png.flaticon.com/512/3275/3275726.png" alt="Plastic Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">Plastic</h1>
-          <p class="text-gray-600 text-center">Versatile and lightweight plastic.</p>
-        </div>
-        <div class="flex flex-col items-center mt-4 md:mt-0">
-          <span class="mr-2">
-            <img src="./images/HDHMR.png" alt="HDHMR Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">HDHMR</h1>
-          <p class="text-gray-600 text-center">High-density and moisture-resistant.</p>
-        </div>
-        <div class="flex flex-col items-center mt-4 md:mt-0">
-          <span class="mr-2">
-            <img src="./images/laminates.png" alt="Laminates Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">Laminates</h1>
-          <p class="text-gray-600 text-center">Stylish and protective laminates.</p>
-        </div>
-        <div class="flex flex-col items-center mt-4 md:mt-0">
-          <span class="mr-2">
-            <img src="./images/PU-Paint.png" alt="PU Paints Icon" class="h-12 w-12">
-          </span>
-          <h1 class="text-lg md:text-xl font-bold text-gray-800">PU Paints</h1>
-          <p class="text-gray-600 text-center">Smooth and durable PU paints.</p>
-        </div>
-      </div>
-    </div>
-
+  <section class="bg-gradient-to-r to-yellow-50 from-yellow-100 p-6">
     <div
-      class="flex flex-wrap justify-around items-center mb-24 mt-24 space-y-4 md:space-y-0 md:space-x-4 bg-gray-100 p-4 rounded-lg shadow-md">
+      class="flex flex-wrap justify-around items-center mb-24 space-y-4 md:space-y-0 md:space-x-4 bg-gray-100 p-4 rounded-lg shadow-md">
       <div class="w-full md:w-96 h-full">
         <img
           src="https://media.istockphoto.com/id/943910360/photo/posters-in-cozy-apartment-interior.jpg?s=612x612&w=0&k=20&c=QzNjsxCNMcFNxpn4E2ocPvSU8Ud2S3B_mHyo5L-HOLo="
@@ -418,6 +391,325 @@
             </div>
           </div>
         </div>
+        <!-- Widget Item 7 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img
+            src="https://img.freepik.com/free-vector/door-set-with-realistic-isolated-images-modern-room-door-models-with-handles-blank-background-vector-illustration_1284-84970.jpg"
+            alt="Widget 7" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 7</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 8 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img
+            src="https://image.made-in-china.com/2f0j00PDuqWoEGsRkO/New-Design-House-Hotel-Interior-Room-Wood-Door-Bedroom-Flush-PVC-Wooden-Doors-for-Sale.jpg"
+            alt="Widget 8" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 8</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 9 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img
+            src="https://media.istockphoto.com/id/137142928/photo/beautiful-wooden-door.jpg?s=612x612&w=0&k=20&c=s3r_CR0INAnOPNIAcRwgM_18sU2vEfaOXRfgSEjDi2k="
+            alt="Widget 9" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 9</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 10 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="https://5.imimg.com/data5/CM/MO/MY-16180212/modular-bedroom-wardrobe.jpg" alt="Widget 10"
+            class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 10</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 11 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="https://www.at-home.co.in/cdn/shop/products/JOYCE4DRLS.jpg?v=1652765606" alt="Widget 11"
+            class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 11</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 12 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img
+            src="https://media.istockphoto.com/id/1419085349/photo/wardrobe-sliding-doors.jpg?s=612x612&w=0&k=20&c=qoDeGZgFe_u9XKQQWHd-o2YYyZODeS-0N5mSR_Z6ZRw="
+            alt="Widget 12" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 12</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 13 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="https://img.freepik.com/free-photo/gray-sofa-brown-living-room-with-copy-space_43614-954.jpg"
+            alt="Widget 13" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 13</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 14 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="https://t4.ftcdn.net/jpg/05/65/75/59/360_F_565755935_GLp4UQXwqgB4wYBGorgOVWm6NqU1taTE.jpg"
+            alt="Widget 14" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 14</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Widget Item 15 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg relative">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQidV_FssUFO-BPKW3QU-YVQfzLBcZ2TRhQw&s"
+            alt="Widget 15" class="w-full h-48 object-cover mb-4 rounded-lg">
+          <!-- Heart icon for favorite -->
+          <button class="absolute top-2 right-2 focus:outline-none heartButton" data-toggle="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              class="h-6 w-6 fill-current text-gray-500 heartIcon">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </button>
+          <h3 class="text-2xl font-semibold mb-2">Widget 15</h3>
+          <p class="text-gray-600 mb-4">Experience the best of modern design and functionality with Widget 6.</p>
+          <!-- Star rating -->
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l2.45 7.38H22l-6.18 4.47 2.45 7.38L12 17.27l-6.27 4.96 2.45-7.38L2 9.38h7.55L12 2z" />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="mx-auto w-56 p-2 mt-8 rounded bg-gray-800 text-white text-center hover:bg-gray-700">
         <button class="text-lg cursor-pointer"><a href="./products.html">See more products --></a></button>
@@ -427,15 +719,15 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-100 py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Logo -->
-        <div class="flex items-center justify-center md:col-span-2 lg:col-span-1">
-          <img src="./images/dufa.png" alt="Dufa Furniture Logo" class="w-56 rounded">
-        </div>
-        <!-- Quick Links -->
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-around gap-8">
+      <!-- Logo -->
+      <div class="flex items-center mb-4 md:mb-0">
+        <img src="./images/dufa.png" alt="Dufa Furniture Logo" class="w-56 rounded">
+      </div>
+      <!-- Navigation Links -->
+      <div class="flex flex-wrap space-x-8">
         <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
           <ul class="space-y-2">
             <li><a href="#" class="hover:text-gray-200">Home</a></li>
             <li><a href="./about.html" class="hover:text-gray-200">About</a></li>
@@ -443,32 +735,20 @@
             <li><a href="./contact.html" class="hover:text-gray-200">Contact</a></li>
           </ul>
         </div>
-        <!-- Social Media Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-          <ul class="flex space-x-4">
-            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-facebook"></i></a></li>
-            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a></li>
-            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a></li>
-            <li class="text-2xl"><a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-          <p class="mb-2">Plot No. 57, Sector 27-28, Hisar (Hry.),</p>
-          <p class="mb-2">Hisar, India, 125001</p>
-          <p class="mb-2">dufamodular@gmail.com</p>
-          <p>8708807007</p>
-        </div>
       </div>
-      <!-- Copyright -->
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-        <p>&copy; 2024 Dufa Furniture. All rights reserved.</p>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Contact Info</h3>
+        <p class="mb-2">Plot No. 57, Sector 27-28, Hisar (Hry.),</p>
+        <p class="mb-2">Hisar, India, 125001</p>
+        <p class="mb-2">dufamodular@gmail.com</p>
+        <p>8708807007</p>
       </div>
     </div>
+    <!-- Copyright -->
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+      <p>&copy; 2024 Dufa Furniture. All rights reserved.</p>
+    </div>
   </footer>
-
   <script src="./script.js"></script>
 </body>
 
